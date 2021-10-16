@@ -1,12 +1,7 @@
 package myCalculator;
 
-import java.lang.reflect.Array;
-import java.util.Map;
-import java.util.TreeMap;
-
 public class Roman {
     protected static String[] values = {"N", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
-
     private String value;
 
     public static int toInt(String value) {
@@ -20,7 +15,7 @@ public class Roman {
         if (intValue < 1) {
             throw new Exception("В римской системе счисления нет нуля и отрицательных чисел");
         }
-        if (intValue > 10){
+        if (intValue > 10) {
             throw new Exception("Результат операции вне пределов используемого диапазона римских цифр");
         }
         return values[intValue];

@@ -2,7 +2,7 @@ package myCalculator;
 
 public class StringParser {
 
-    /*Метод возвращает true, если выражение состоит из одной математической операции +-/* и двух аргументов,
+    /*возвращает true, если выражение состоит из одной математической операции +-/* и двух аргументов,
     являющихся римскими цифрами
     */
     public static boolean isRomanExpression(String string) {
@@ -10,14 +10,14 @@ public class StringParser {
                 "[\\+ \\- \\* \\/] (I|II|III|IV|V|VI|VII|VIII|IX|X)");
     }
 
-    /*Метод возвращает true, если выражение состоит из одной математической операции +-/* и двух аргументов,
+    /*возвращает true, если выражение состоит из одной математической операции +-/* и двух аргументов,
     являющихся арабскими цифрами
     */
     protected static boolean isArabianExpression(String string) {
         return string.matches("([0-9]|10) [\\+ \\- \\* \\/] ([0-9]|10)");
     }
 
-    /*Метод извлекает члены выражения и помещает в массив*/
+    /*извлекает члены выражения и помещает в массив*/
     protected static String[] members(String expression) throws Exception {
         if (!(isRomanExpression(expression) || isArabianExpression(expression))){
             throw new Exception("\nФормат математической операции не удовлетворяет заданию," +
