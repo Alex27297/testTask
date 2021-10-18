@@ -20,7 +20,7 @@ public class Calc {
                 break;
         }
         if (StringParser.isRomanExpression(expression)) {
-            return Roman.toRoman(intResult);
+            return Roman.toRomanLessHundredInclusive(intResult);
         } else return Integer.toString(intResult);
     }
 }

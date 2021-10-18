@@ -31,7 +31,7 @@ public class StringParser {
     public static int argument(String expression, int argumentNumber) throws Exception {
         int index = (argumentNumber - 1) * 2;
         String member = members(expression)[index];
-        if (isRomanExpression(expression)) return Roman.toInt(member);
+        if (isRomanExpression(expression)) return Roman.toIntLessTenInclusive(member);
         return Integer.parseInt(member);
     }
     /*извлекает из выражения знак математической операции*/
